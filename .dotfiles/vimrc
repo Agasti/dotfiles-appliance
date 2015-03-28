@@ -14,10 +14,11 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
+Plugin 'scrooloose/nerdtree'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
-"Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-fugitive'
 " plugin from http://vim-scripts.org/vim/scripts.html
 "Plugin 'L9'
 " Git plugin not hosted on GitHub
@@ -46,6 +47,9 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 
+set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
+set term=xterm-256color
+let g:Powerline_symbols='fancy'
 
 set cursorline t_co=256 nu
 colorscheme molokai
@@ -215,7 +219,7 @@ if has("gui_running")
 endif
 
 " Set utf8 as standard encoding and en_US as the standard language
-set encoding=utf8
+set encoding=utf_8
 
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
